@@ -1,10 +1,12 @@
 # Time Series Anomaly Detection for IDR/USD
 
+**English** · [Bahasa Indonesia](README.id.md)
+
 This project uses **ARIMA(0,1,3) with drift** to forecast the rupiah–dollar exchange rate and an **Individuals control chart (I-chart)** to flag unusually large model errors. Across 148 historical observations, the residual chart flagged **9 points**. The 30-step forecast rises to **Rp18,063.28 per USD**, with a step-30 95% prediction interval of **Rp17,713.72–18,412.84**.
 
 ## Data and stationarity
 
-The [input workbook](idr-usd.xlsx) contains 148 daily records from January 1 to May 28, 2026. The `IDR` column is the number of rupiah per US dollar, so an increase indicates a weaker rupiah against the dollar. Rates in the workbook range from **Rp16,699.50** to **Rp17,834.75**, with a mean of **Rp17,044.01** and a median of **Rp16,940.29**. The series rises more sharply toward the end of the sample.
+The workbook contains 148 daily exchange rates from Xe, covering January 1 to May 28, 2026. The `IDR` column is the number of rupiah per US dollar, so an increase indicates a weaker rupiah against the dollar. Rates in the workbook range from **Rp16,699.50** to **Rp17,834.75**, with a mean of **Rp17,044.01** and a median of **Rp16,940.29**. The series rises more sharply toward the end of the sample. [Xe Currency Tables](https://www.xe.com/currencytables/) · [Input workbook](idr-usd.xlsx)
 
 ![Historical IDR per USD, rising from about 16,700 to about 17,800](assets/idr-usd/01-historical-series.png)
 
@@ -109,4 +111,4 @@ The forecast table is available as `df_fc`, the residual chart data as `df_res_c
 
 ## Sources
 
-The analysis follows the supplied manuscript *Deteksi Sinyal Out-of-Control pada Peramalan Nilai Tukar Melalui Pendekatan ARIMA-Control Chart* (SNS XIV, 2026). The numerical results use the accompanying R console output and the repository's workbook. The figures retain the original Indonesian labels.
+The analysis follows the supplied manuscript *Deteksi Sinyal Out-of-Control pada Peramalan Nilai Tukar Melalui Pendekatan ARIMA-Control Chart*. The numerical results use the accompanying R console output and the repository's workbook. The figures retain the original Indonesian labels.
